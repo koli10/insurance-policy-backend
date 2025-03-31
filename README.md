@@ -1,80 +1,83 @@
-# insurance-policy-backend
-🏦 Insurance Policy Management System - Backend
-This is the Flask backend for the Insurance Policy Management System. It provides a RESTful API to manage insurance policies, allowing users to create, read, update, and delete (CRUD) insurance policies.
+# Insurance Policy Management System - Backend
 
-🚀 Tech Stack
-Backend: Flask (Python)
+This is the Flask backend for the Insurance Policy Management System. It provides a RESTful API to manage insurance policies, allowing users to perform CRUD (Create, Read, Update, Delete) operations.
 
-Database: SQLite
+## Tech Stack
+- **Backend:** Flask (Python)
+- **Database:** SQLite
+- **API Testing:** Postman
 
-API Testing: Postman
+## Setup Instructions
 
-⚙️ Setup Instructions
-1️⃣ Clone the Repository
-bash
-Copy
-Edit
+### 1. Clone the Repository
+```bash
 git clone https://github.com/<your-github-username>/insurance-policy-backend.git
 cd insurance-policy-backend
-2️⃣ Create a Virtual Environment (Optional, but Recommended)
-bash
-Copy
-Edit
+```
+
+### 2. Create a Virtual Environment (Optional, but Recommended)
+```bash
 python -m venv venv
 source venv/bin/activate  # Mac/Linux
 venv\Scripts\activate  # Windows
-3️⃣ Install Dependencies
-bash
-Copy
-Edit
+```
+
+### 3. Install Dependencies
+```bash
 pip install -r requirements.txt
-4️⃣ Initialize the Database
-bash
-Copy
-Edit
+```
+
+### 4. Initialize the Database
+```bash
 python init_db.py
-This will create an insurance.db file with the required tables.
+```
+This will create an `insurance.db` file with the required tables.
 
-5️⃣ Run the Flask Server
-bash
-Copy
-Edit
+### 5. Run the Flask Server
+```bash
 python app.py
+```
 The server will start on:
-📍 http://127.0.0.1:5000/
+**http://127.0.0.1:5000/**
 
-🔥 API Endpoints
-Method	Endpoint	Description
-GET	/policies	Get all policies
-POST	/policies	Add a new policy
-GET	/policies/<id>	Get a specific policy
-PUT	/policies/<id>	Update a policy
-DELETE	/policies/<id>	Delete a policy
-🔎 Testing with Postman
-1️⃣ Open Postman
-2️⃣ Use http://127.0.0.1:5000/policies to test API requests.
-3️⃣ Send GET, POST, PUT, DELETE requests to interact with the database.
+## API Endpoints
 
-⚠️ Error Handling & Validation
-Input validation is implemented to prevent bad data.
+| Method | Endpoint           | Description         |
+|--------|-------------------|---------------------|
+| GET    | `/policies`       | Get all policies   |
+| POST   | `/policies`       | Add a new policy   |
+| GET    | `/policies/<id>`  | Get a specific policy |
+| PUT    | `/policies/<id>`  | Update a policy    |
+| DELETE | `/policies/<id>`  | Delete a policy    |
 
-Proper HTTP status codes are returned for different errors.
+## Testing with Postman
+1. Open **Postman**
+2. Use `http://127.0.0.1:5000/policies` to test API requests.
+3. Send **GET, POST, PUT, DELETE** requests to interact with the database.
 
-Try-Except blocks handle unexpected errors gracefully.
+## Error Handling & Validation
+- Input validation is implemented to prevent bad data.
+- Proper HTTP status codes are returned for different errors.
+- Try-Except blocks handle unexpected errors gracefully.
 
-🛠 Troubleshooting
-1️⃣ Module Not Found Error?
+## Troubleshooting
 
-Run pip install -r requirements.txt
-2️⃣ Database Not Created?
+### 1. Module Not Found Error?
+```bash
+pip install -r requirements.txt
+```
 
-Run python init_db.py
-3️⃣ Port Already in Use?
+### 2. Database Not Created?
+```bash
+python init_db.py
+```
 
-Run kill -9 $(lsof -t -i:5000) on Mac/Linux
+### 3. Port Already in Use?
+```bash
+kill -9 $(lsof -t -i:5000)  # Mac/Linux
+```
+For **Windows**, restart your PC or try another port.
 
-Restart your PC (Windows)
-
-📜 License
+## License
 This project is open-source under the MIT License.
 
