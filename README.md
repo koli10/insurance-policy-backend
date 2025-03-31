@@ -11,7 +11,7 @@ This is the Flask backend for the Insurance Policy Management System. It provide
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/<your-github-username>/insurance-policy-backend.git
+git clone https://github.com/koli10/insurance-policy-backend.git
 cd insurance-policy-backend
 ```
 
